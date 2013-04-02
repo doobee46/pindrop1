@@ -1,0 +1,36 @@
+<div id="navbar" >
+            <header class="container_12">
+                <div class="grid_12">
+                    <div class=" logo grid_2 suffix_2 alpha">
+                        <%= link_to image_tag("logo.png"), {:controller => "/pages", :action => "home"} %>
+                    
+                    </div>
+                    <div class="nav grid_8  omega">
+                        <ul>
+                            <li><%= link_to 'about', about_path %></li>
+                            
+                            <% if user_signed_in?%>
+                            
+                            <li>      
+                                <%= link_to 'My Account', edit_user_registration_path%>
+                            </li>
+
+                            <li>  
+                                <%= link_to "log out", destroy_user_session_path, method: :delete%>
+                                
+                            </li>
+
+                            <%else%>
+                            <li>
+                                <%= link_to 'login', login_path %>
+                            </li>
+
+                            <%end%>
+
+                        </ul>
+
+                    </div>
+                
+                </div>
+            </header>
+        </div>

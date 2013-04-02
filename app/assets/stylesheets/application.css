@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+/******************css reset************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*********************************************/
+
+#navbar{
+    background-color:rgb(249,249,249);
+	width: 100%;
+	height: 63px;
+	position: fixed;
+	z-index: 1030;
+	margin-top: -63px;
+	-moz-box-shadow:0px -1px 2px rgba(0,0,0,0.52);
+	-webkit-box-shadow:0px -1px 2px rgba(0,0,0,0.52);
+	box-shadow:0px -1px 2px rgba(0,0,0,0.52);
+
+		
+}
+
+.logo img {
+	padding-top: 14px;
+}
+
+.nav ul{
+	list-style-type: none;
+	margin: 0; padding: 0;
+	float: right;
+}
+
+.nav ul li{
+	float: left;
+}
+
+.nav ul li a{
+	display:block;
+	padding: 0 20px;
+	color:#444444;
+	font-size: 14px;
+	text-decoration:none;
+	line-height: 63px;
+	text-transform: capitalize;
+	font-family:"Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+}
+.nav ul li a:hover{
+	background-color: #EEEEEE;
+	color:#444444;
+	zoom:1;
+	filter:alpha{opacity = 80};
+	opacity: 0.8;
+
+}

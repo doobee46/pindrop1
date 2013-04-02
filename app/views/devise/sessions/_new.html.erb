@@ -1,0 +1,26 @@
+                   <div id="log_form" class="grid_4 alpha">
+
+	                    	        <h3 class="form_title">Log in</h3>
+	                                <p class="form_sub">Please log me into my account</p>
+	                            
+	                                <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	                                 <div class="notice">
+									  <%= devise_error_messages! %>
+									 </div>
+
+									  <%= f.label :email %><br />
+									  <%= f.email_field :email, :autofocus => true %>
+
+									  <%= f.label :password %><br />
+									  <%= f.password_field :password %>
+
+									  <%= f.submit "Sign in", class: 'btn-red' %>
+									<% end %>
+
+	                                <div class="retrieve"> 
+									<%= link_to 'Sign up', new_user_registration_path %><br>
+									<%= link_to "Forgot your password?", new_password_path('user') %>
+									</div>
+	                            
+	                    </div>
+	                     
