@@ -1,18 +1,23 @@
+      <%if user_signed_in?%>
+      <div>
+      <%else%>
       <div id="jumbotron">
+      <%end%>
             <div class="container_12">
                 <div class="grid_12">
                     <% if user_signed_in?%>
                     <div class=>
-                        <%= image_tag current_user.gravatar_url %>
-
+                        
                     <div>
 
 
                     <%else%>
-                    <div class="hero_unit">
-                        <h1 class="text_lead"> Collect things , save and share with your friends and  persons you cared about . </h1>
-                        
-                    </div>
+                    
+                        <div  class="hero_unit">
+                            <h1 class="text_lead"> Collect things , save and share with your friends and  persons you cared about . </h1>
+                            
+                        </div>
+
                 </div>
                 
             </div>

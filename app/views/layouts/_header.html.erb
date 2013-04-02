@@ -12,7 +12,12 @@
                             <% if user_signed_in?%>
                             
                             <li>      
-                                <%= link_to 'My Account', edit_user_registration_path%>
+                                <%= image_tag current_user.gravatar_url %>
+                                
+                            </li>
+                            <li>
+                                <%= link_to 'My account',edit_user_registration_path%>
+
                             </li>
 
                             <li>  
