@@ -1,23 +1,34 @@
-<h1>Listing pins</h1>
 
-<table>
-  <tr>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="container_12">
+  <div class="grid_12">
+    <div class="pin_account grid_9 suffix_1 ">
 
-<% @pins.each do |pin| %>
-  <tr>
-    <td><%= pin.description %></td>
-    <td><%= link_to 'Show', pin %></td>
-    <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-    <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+          <h3 class="form_title">Pins listing</h3>
 
-<br />
+      <table class="table table-stripped table-hover">
+        <thead>
 
-<%= link_to 'New Pin', new_pin_path %>
+          <tr>
+            <th>Description</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+       <tbody>
+        <%= render @pins %>
+        
+      </tbody>
+      
+      </table>
+
+      <br />
+
+      <%= link_to 'New Pin', new_pin_path,  class:"btn-red" %>
+     
+
+     </div>
+
+    </div>
+</div>
