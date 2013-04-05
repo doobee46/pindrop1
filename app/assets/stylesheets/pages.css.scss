@@ -10,7 +10,7 @@ body {
 
 #jumbotron{
     /* This image will be displayed fullscreen */
-    background:url('http://farm8.staticflickr.com/7218/7289572558_44c110c510_h.jpg') no-repeat center center;
+    background:url('http://img21.imageshack.us/img21/5606/86154183571e2bf4d128h.jpg') no-repeat center center;
     
     /* Ensure the html element always takes up the full height of the browser window */
     min-height:100%;
@@ -158,6 +158,15 @@ p.link{
    
 }
 
+.top_gravatar{
+    width:24px;
+    height:24px;
+    margin-top:16px;
+    float: left;
+    padding-right:3px;
+    padding-left: 3px;
+}
+
 .new_account h2{
     /*font-family: Arial,Helvetica,sans-serif;
     font-size: 13px;
@@ -196,6 +205,7 @@ h2{
     text-align: left;
     margin-bottom: 10px;
 }
+
 .btn-red {
    background-image: linear-gradient(rgb(214, 34, 41), rgb(171, 23, 30));
     box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.34);
