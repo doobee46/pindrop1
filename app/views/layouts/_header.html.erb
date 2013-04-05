@@ -12,6 +12,10 @@
                             <% if user_signed_in?%>
 
                             <li>
+                                <%= link_to 'Add + ', new_pin_path %>
+                            </li>
+
+                            <li>
                                 <div class="top_gravatar">
                                     <%= image_tag current_user.gravatar_url %>
                                 </div> 
@@ -19,11 +23,10 @@
                             
                             <li>
                                  
-                              <%= link_to 'my account' ,edit_user_registration_path%>
+                              <%= link_to 'Edit Profile ' ,edit_user_registration_path%>
                                
                             </li>
-                            
-
+                        
                             <li>  
                                 <%= link_to "log out", destroy_user_session_path, method: :delete%>
                                 

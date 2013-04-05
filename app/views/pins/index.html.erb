@@ -1,32 +1,15 @@
 
 <div class="container_12">
   <div class="grid_12">
-    <div class="pin_account grid_9 suffix_1 ">
+    <div class="grid_12 ">
 
-          <h3 class="form_title">Pins listing</h3>
 
-      <table class="table table-stripped table-hover">
-        <thead>
+        <div id="pins">
+           <%= render @pins %>
+        </div>
+     
 
-          <tr>
-            <th>Image</th>
-            <th>Description</th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-
-       <tbody>
-        <%= render @pins %>
-        
-      </tbody>
       
-      </table>
-
-      <br />
-
-      <%= link_to 'New Pin', new_pin_path,  class:"btn-red" %>
      
 
      </div>
