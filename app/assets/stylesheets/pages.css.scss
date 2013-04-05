@@ -9,8 +9,6 @@ body {
 }
 
 #jumbotron{
-    /* This image will be displayed fullscreen */
-    background:url('http://img21.imageshack.us/img21/5606/86154183571e2bf4d128h.jpg') no-repeat center center;
     
     /* Ensure the html element always takes up the full height of the browser window */
     min-height:100%;
@@ -18,7 +16,7 @@ body {
     /* The Magic */
     background-size:cover;
 
-    height:450px;
+    height:490px;
 }
 .index{
     margin-top:25px;
