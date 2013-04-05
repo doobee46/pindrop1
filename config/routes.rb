@@ -10,7 +10,7 @@ Pindrop::Application.routes.draw do
   
   
 
-  root :to => 'pages#home'
+  root :to => 'pins#index'
 
   
 
