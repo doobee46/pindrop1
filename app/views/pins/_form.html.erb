@@ -14,6 +14,8 @@
   <div class="field">
     <%= f.label :image ,"upload an image" %><br/>
     <%= f.file_field :image %> <br/>
+    <%= f.label :image_remote_url, "or enter url"%><br/>
+    <%= f.text_field :image_remote_url%><br/>
     <%= f.label :description %><br />
     <%= f.text_field :description%>
   </div>
