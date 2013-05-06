@@ -1,12 +1,15 @@
 Pindrop::Application.routes.draw do
+  get "users/show"
+
   resources :pins
 
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
 
- match 'login', :to => "pages#login", :as => :login
- match 'about', :to => "pages#about", :as => :about
+  match 'login', :to => "pages#login", :as => :login
+  match 'about', :to => "pages#about", :as => :about
   
   
 
