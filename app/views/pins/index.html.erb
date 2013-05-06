@@ -1,17 +1,19 @@
-<%=render 'pages/home'%>
 
-<div class= "container_12">
-  <div class=" index grid_12">
 
-    <div id="pins">
-      <%= render @pins %>
-    </div>
+  <div class="container_12">
+            <div class="grid_12">
+            	<%=render 'pages/home'%>
+	            <div class="index">
+	              <div id="pins">
+	      			<%= render @pins %>     
+	              </div>
 
+				 </div>
+
+				
+			</div>
+			<%= will_paginate @pins %>
   </div>
 
-</div>
-        
-     
 
-      
-     
+        
