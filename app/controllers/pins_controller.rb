@@ -46,6 +46,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.save
+        @pin.create_activity :create, owner: current_user
         format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
         format.json { render json: @pin, status: :created, location: @pin }
       else
@@ -76,6 +77,7 @@ class PinsController < ApplicationController
   def destroy
     @pin = current_user.pins.find(params[:id])
     @pin.destroy
+    @pin.create_activity :destroy, owner: current_user
 
     respond_to do |format|
       format.html { redirect_to pins_url }

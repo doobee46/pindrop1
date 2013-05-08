@@ -1,6 +1,11 @@
 Pindrop::Application.routes.draw do
+  
+
+  match '/rate' => 'rater#create', :as => 'rate'
+
   get "users/show"
 
+  resources :activities
   resources :pins
 
 

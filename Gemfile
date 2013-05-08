@@ -16,6 +16,12 @@ gem 'will_paginate', '3.0.3'
 
 gem 'bootstrap-will_paginate'
 
+gem 'letsrate'
+
+gem 'public_activity'
+
+gem "acts_as_follower"
+
 
 group :production do
   gem 'pg'
