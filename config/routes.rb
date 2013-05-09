@@ -12,10 +12,10 @@ Pindrop::Application.routes.draw do
   devise_for :users
   match 'users/:id' => 'users#show', as: :user
 
-
+  match 'index', :to => "pages#index", :as => :index
   match 'login', :to => "pages#login", :as => :login
   match 'about', :to => "pages#about", :as => :about
-  
+  match 'contact', :to => "pages#contact", :as => :contact
   
 
   root :to => 'pins#index'

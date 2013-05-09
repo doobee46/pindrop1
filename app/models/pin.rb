@@ -13,6 +13,7 @@ class Pin < ActiveRecord::Base
 
   scope :published, where("pins.created_at IS NOT NULL ")
   scope :recent, lambda{published.where("pins.created_at > ?", 1.week.ago.to_date).limit(4)}
+  scope :My_pins, lambda{user.pins}
 
   letsrate_rateable "like"
 
@@ -22,4 +23,15 @@ class Pin < ActiveRecord::Base
   	self.image = URI.parse(url_value)unless url_value.blank?
   	super	
   end
+
+  def gravatar_url
+    stripped_email = email.strip
+    downcased_email = stripped_email.downcase
+    hash = Digest::MD5.hexdigest(downcased_email)
+
+    "http://gravatar.com/avatar/#{hash}"
+
+ end
+
+
 end

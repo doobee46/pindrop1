@@ -1,19 +1,24 @@
 <div id="navbar" >
-            <header class="container_12">
-                <div class="grid_12">
+            <header class="container_16">
+                <div class="grid_16">
                     <div class=" logo grid_2 suffix_2 alpha">
                         <%= link_to (image_tag("logo.png")), root_path %>
                     
                     </div>
-                    <div class="nav grid_8  omega">
+                    <div class="nav grid_12  omega">
                         <ul>
-                            <li><%= link_to 'about', about_path %></li>
+                            
                             
                             <% if user_signed_in?%>
 
                             <li>
                                 <%= link_to 'Add + ', new_pin_path %>
                             </li>
+
+                            <li>
+                              <a href="">My Pins</a>
+                            </li>
+
 
                             <li>
                                 <div class="top_gravatar">

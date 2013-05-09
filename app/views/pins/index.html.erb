@@ -1,18 +1,43 @@
-<%=render 'pages/home'%>
-
-  <div class="container_12">
+<%if user_signed_in?%>
+<div class="container_12">
             <div class="grid_12">
 	            <div class="index">
+
 	              <div id="pins">
 	      			<%= render @pins %>     
 	              </div>
 
 				 </div>
-
 				
 			</div>
 			<%= will_paginate @pins %>
   </div>
+ 
+<%else%>
+	   <div class="container_16">
+		<div class="grid_16">
+			<div class="leading">
+			<p> Organize the thing you love </p>
+			</div>
+
+			<div class="computer">
+				<%= image_tag "computer.png"%>
+			</div>
+
+			<div class ="leading">
+				<p> Collect,save and share with your friends and persons you cared about. </p>
+			</div>
+
+			<div id="main_action" class="grid_4 prefix_4 suffix_4">
+	            <%= link_to 'Join for free', login_path, class: "btn-large-primary"%>
+	        </div>
+
+
+		</div>
+
+	</div>
+<%end %>
+  
 
 
         
