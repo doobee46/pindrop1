@@ -96,11 +96,11 @@ table {
 	font-family:"Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
 }
 .nav ul li a:hover{
-	background-color: #EEEEEE;
-	color:#444444;
+	/*background-color: #EEEEEE;*/
+	color:#D90000;
 	zoom:1;
-	filter:alpha{opacity = 80};
-	opacity: 0.8;
+	/*filter:alpha{opacity = 80};
+	opacity: 0.8;*/
 
 }
 

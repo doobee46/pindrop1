@@ -16,7 +16,7 @@
                             </li>
 
                             <li>
-                              <a href="">My Pins</a>
+                             <%= link_to 'My Pins ', current_user %>
                             </li>
 
 
@@ -38,6 +38,10 @@
                             </li>
 
                             <%else%>
+                            <li>
+                                <%= link_to 'About', about_path %>
+                            </li>
+
                             <li>
                                 <%= link_to 'login', login_path %>
                             </li>
