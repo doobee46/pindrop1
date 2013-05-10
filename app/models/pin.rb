@@ -13,7 +13,7 @@ class Pin < ActiveRecord::Base
 
   scope :published, where("pins.created_at IS NOT NULL ")
   scope :recent, lambda{published.where("pins.created_at > ?", 1.week.ago.to_date).limit(4)}
-  scope :My_pins, lambda{user.pins}
+  
 
   letsrate_rateable "like"
 
@@ -23,7 +23,11 @@ class Pin < ActiveRecord::Base
   	self.image = URI.parse(url_value)unless url_value.blank?
   	super	
   end
-
+  
+  def new_pin
+    user.pins.count
+    
+  end
   
 
 end

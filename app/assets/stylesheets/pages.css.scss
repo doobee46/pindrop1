@@ -22,7 +22,7 @@ body {
     margin-top:25px;
 }
 .hero_unit{
-    padding: 40px 44px 40px 44px;
+    padding: 15px 15px 5px 15px;
     background-color:rgba(255,255,255, 0.7);
 	margin-top:0px;
 	border-color:rgb(221,221,221);
@@ -401,8 +401,8 @@ color: rgb(0, 150, 187);
 }
 
 .leading2{
-    width:380px;
-    float:right;
+    
+    
 
 }
 
@@ -412,7 +412,7 @@ color: rgb(0, 150, 187);
     line-height:120%;
     font-weight:bold;
     color:rgb(54, 54, 54);
-    text-align:left;
+    text-align:center;
     margin-top:0px;
     margin-bottom:46px;
     text-transform:capitalize;
@@ -420,5 +420,9 @@ color: rgb(0, 150, 187);
 }
 
 .computer img{
-    margin-top: 56px;
+    top: 50%;
+    left: 50%;
+    margin-left:232px;
+    margin-top:0px;
+    margin-bottom:56px;
 }

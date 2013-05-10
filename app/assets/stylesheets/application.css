@@ -75,17 +75,17 @@ table {
 	padding-top: 14px;
 }
 
-.nav ul{
+.nav_main ul{
 	list-style-type: none;
 	margin: 0; padding: 0;
 	float: right;
 }
 
-.nav ul li{
+.nav_main ul li{
 	float: left;
 }
 
-.nav ul li a{
+.nav_main ul li a{
 	display:block;
 	padding: 0 20px;
 	color:#444444;
@@ -95,7 +95,7 @@ table {
 	text-transform: capitalize;
 	font-family:"Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
 }
-.nav ul li a:hover{
+.nav_main ul li a:hover{
 	/*background-color: #EEEEEE;*/
 	color:#D90000;
 	zoom:1;
@@ -104,7 +104,7 @@ table {
 
 }
 
-.nav ul li img{
+.nav_main ul li img{
     width:24px;
     height:24px;
     margin-top:16px;
