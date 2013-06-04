@@ -1,0 +1,77 @@
+<div class="container_16">
+  <div class="index grid_16">
+    <div class="grid_4 suffix_1 alpha">
+
+      <div class="profile_account">
+        <%=image_tag "avatar.png" %>
+      </div>
+
+      <div class="profile_account">
+         <h3 class="form_title"><%= @user.name %></h3>
+         <h4 class="form_sub">Joined :<%= time_ago_in_words(current_user.created_at) +" "+ "ago" %></h4>
+      </div>
+      <div class="profile_account">
+        <div> 
+          <h3 class="form_title">Cancel my account,Unhappy?</h3>
+
+          <p class="link"> <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete , class: 'btn-red' %></p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="grid_6">
+
+      <div class="form_account">
+                <h3 class="form_title">My Profile</h3>
+                <p class="form_sub">click below to update your settings </p>
+
+                <form>
+                    
+                        <%= form_for(resource, :as => resource_name, :url => user_registration_path(resource_name), :html => { :method => :put }) do |f| %>
+                        <div class="notice">
+                          <%= devise_error_messages! %>
+                        </div>
+
+                        <%= f.label :name %><br>
+                        <%= f.text_field :name%><br>
+
+                        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                        <% end %>
+
+                        <%= f.label :password %><br/>
+                        <%= f.password_field :password %>
+
+                        <%= f.label :password_confirmation %><br/>
+                        <%= f.password_field :password_confirmation %><br/>                 
+
+                        <%= f.label :email %><br/>
+                        <%= f.email_field :email, :autofocus => true %><br>
+
+                        <%= f.label :current_password %><br/>
+                        <%= f.password_field :current_password %><br>
+
+                        <%= f.submit "Update" , class: 'btn-blue'%>
+                        <% end %>
+
+                        <%= link_to "Back", :back  %>
+
+                </form>
+                
+
+      </div>
+      
+
+    </div>
+    <div class="grid_4 omega">
+        <div class="form_account">
+          <h3 class="form_title">My Profile Picture </h3>
+          <P class="form_sub">Click below to update your picture</p>
+
+        </div>
+
+      </div>
+  </div>
+</div>

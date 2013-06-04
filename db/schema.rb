@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20130507141821893) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "image_remote_url"
+    t.integer  "price"
   end
 
   add_index "pins", ["user_id"], :name => "index_pins_on_user_id"

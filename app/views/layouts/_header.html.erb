@@ -5,9 +5,10 @@
                         <%= link_to (image_tag("logo.png")), root_path %>
                     
                     </div>
-                    <div class="nav_main grid_12  omega">
+                    
+                    <div class=" nav_main grid_12  omega">
                         <ul>
-
+                                
                             <% if user_signed_in?%>
 
                                  
@@ -19,15 +20,15 @@
                                         </li>
 
                                         <li>
-                                           <span class="badge badge-info"><%= %></span>
+                                           <%= link_to 'Home Feed',activities_path %>
                                         </li>
 
 
-                                        <li>
+                                        <!--<li>
                                             <div class="top_gravatar">
                                                 <%= image_tag current_user.gravatar_url %>
                                             </div> 
-                                        </li>
+                                        </li>-->
                                     
                                         <li>
                                              
@@ -43,20 +44,27 @@
                             
                            
                             <%else%>
+
                             <li>
                                 <%= link_to 'About', about_path %>
                             </li>
 
+
                             <li>
                                 <%= link_to 'login', login_path %>
+                            </li>
+                            
+                            <li>
+                            <%= link_to 'contact us ', contact_path %>
                             </li>
 
                             <%end%>
 
                         </ul>
+                            
 
                     </div>
                 
                 </div>
             </header>
-        </div>
+</div>

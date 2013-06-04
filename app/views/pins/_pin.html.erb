@@ -1,28 +1,27 @@
 <div class="box">
+       <%= link_to (image_tag pin.image(:medium)), pin%> 
+       <%= pin.price %>
 
-          <%= link_to (image_tag pin.image(:medium)), pin%>
-          <p class="form_sub">
-             <%= pin.description %>
-          </p>
+       <p class="pin_title">
+        <%= pin.description %>
+       </p>
 
-          <p class="form_sub">
-          	<strong>
-          	   Posted by <%=link_to pin.user.name, pin.user%>
-            </strong>
+       <p >
+        <strong class= "pin_sub">
+          Posted by <%=link_to pin.user.name, pin.user%>
+          <%= time_ago_in_words(pin.created_at) +" "+ "ago" %>
+        </strong>
 
-          </p>
-          <div>
-            
-          </div>
-          
-          
-          <div>
-          	  
-	          <%if current_user == pin.user %>
-	          <%= link_to 'Edit', edit_pin_path(pin) %>
-	          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-	          <%end%>
-          </div>
-        
-</div>      
+        </p>
+        <div>
+              
+            <%if current_user == pin.user %>
+            <%= link_to 'Edit', edit_pin_path(pin) %>
+            <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%end%>
+        </div>
+</div>
+
+
+
 

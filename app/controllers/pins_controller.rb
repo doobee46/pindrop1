@@ -77,7 +77,6 @@ class PinsController < ApplicationController
   def destroy
     @pin = current_user.pins.find(params[:id])
     @pin.destroy
-    @pin.create_activity :destroy, owner: current_user
 
     respond_to do |format|
       format.html { redirect_to pins_url }
