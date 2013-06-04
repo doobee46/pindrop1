@@ -7,6 +7,7 @@ body {
     min-height:100%;
 	/*background-color: rgb(231,229,230);*/
 	padding-top:63px;
+
 }
 
 #jumbotron{
@@ -438,7 +439,7 @@ color: rgb(0, 150, 187);
 }
 
 .front_bigtext{
-    font-family:Oswald;
+    font-family: 'Oswald', sans-serif;
     font-size:36px;
     line-height:120%;
     color:rgb(255,255,255);
@@ -451,7 +452,7 @@ color: rgb(0, 150, 187);
     margin-bottom:8px;
 }
 .front_sub{
-    font-family:Oswald;
+    font-family: 'Oswald', sans-serif;
     font-size:28px;
     line-height:120%;
     color:rgb(255,255,255);
