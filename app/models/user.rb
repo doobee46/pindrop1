@@ -14,8 +14,6 @@ class User < ActiveRecord::Base
                    :dependent => :destroy 
 
   letsrate_rater
-  
-
 
   def gravatar_url
 	  stripped_email = email.strip
@@ -24,7 +22,7 @@ class User < ActiveRecord::Base
 
 	  "http://gravatar.com/avatar/#{hash}"
 
- end
+  end
 
 
 
