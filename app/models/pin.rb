@@ -38,7 +38,7 @@ class Pin < ActiveRecord::Base
   end
 
   def currency_display
-    number_to_currency(price)
+   
   end 
   
 
