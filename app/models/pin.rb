@@ -1,7 +1,7 @@
 class Pin < ActiveRecord::Base
   include PublicActivity::Common
 # tracked except: :update, owner: ->(controller, model) { controller && controller.current_user }
-  attr_accessible :description, :image, :image_remote_url
+  attr_accessible :description, :image, :image_remote_url, :price
 
   validates :description, presence: true
   validates :user_id, presence: true
