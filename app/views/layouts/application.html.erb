@@ -9,17 +9,17 @@
 </head>
 <body>
 	<%= render 'layouts/header'%>
-	<div class="container_16">
-    	<div class="grid_16">
-        <div class="container">
-        <% flash.each do |type, message| %>
-           <div class="alert">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <%=flash[:notice]%>
-          </div>
-        <%end%>           
-    	</div>
-  </div> 
+  	<div class="container_16">
+      	<div class="grid_16">
+          <div class="container">
+          <% flash.each do |type, message| %>
+             <div class="alert">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <%=flash[:notice]%>
+            </div>
+          <%end%>           
+      	</div>
+    </div>
 	<%= yield %>
 	<%= render 'layouts/footer'%>
 
