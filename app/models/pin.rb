@@ -28,6 +28,18 @@ class Pin < ActiveRecord::Base
     time_ago_in_words(user.created_at)
     
   end
+
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['description LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
+
+  def currency_display
+    number_to_currency(price)
+  end 
   
 
 end

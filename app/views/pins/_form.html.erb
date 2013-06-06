@@ -12,14 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :image ,"upload an image" %><br/>
-    <%= f.file_field :image %> <br/>
-    <%= f.label :image_remote_url, "or enter url"%><br/>
-    <%= f.text_field :image_remote_url%><br/>
-    <%= f.label :description %><br />
-    <%= f.text_area :description, :col =>30, :rows => 10 %>
+    <%= f.label :image ,"upload an image" %>
+    <%= f.file_field :image %>
+    <%= f.label :image_remote_url, "or enter url"%>
+    <%= f.text_field :image_remote_url%>
+    <%= f.label :price, "Enter price" %>
+    <%= f.text_field :price %>
+    <%= f.label :description %>
+    <%= f.text_area :description, :col =>30, :rows =>3 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "create", class: "btn btn-primary" %>
   </div>
 <% end %>

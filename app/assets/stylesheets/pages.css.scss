@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	line-height: 1;
     min-height:100%;
 	/*background-color: rgb(231,229,230);*/
 	padding-top:63px;
@@ -22,7 +21,7 @@ body {
 }
 
 .index{
-    margin-top:-10px;
+    margin-top:-5px;
 }
 index2{
     margin-top:25px;
@@ -546,4 +545,17 @@ color: rgb(0, 150, 187);
     text-align: left;
     margin-bottom: 10px;
     border-bottom: 1px solid #CCCCCC;
+}
+.price{
+    position:absolute;
+    top:20px;
+    background-color:rgb(178,0,0);
+    width:48px;
+    height:14px;
+    padding: 5px;
+    font-family:Oswald;
+    font-size:11px;
+    line-height:120%;
+    color:rgb(255,255,255);
+    text-align:right;
 }
