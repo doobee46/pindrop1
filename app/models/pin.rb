@@ -17,9 +17,6 @@ class Pin < ActiveRecord::Base
 
   letsrate_rateable "like"
  
-
- 
-
   def image_remote_url=(url_value)
   	self.image = URI.parse(url_value)unless url_value.blank?
   	super	
