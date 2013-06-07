@@ -16,6 +16,7 @@ class Pin < ActiveRecord::Base
   
 
   letsrate_rateable "like"
+ 
 
  
 

@@ -519,7 +519,6 @@ color: rgb(0, 150, 187);
     margin-bottom: 3px;
     margin-top:5px;
     text-transform:capitalize;
-    border-bottom: 1px solid #DDDDDD;
     border-top:1px solid #DDDDDD;
     padding-top:5px;
     padding-bottom: 5px;
@@ -575,10 +574,89 @@ color: rgb(0, 150, 187);
 
 .media_box{
     padding-bottom:7px;
+    border-top: 1px solid #DDDDDD;
     border-bottom:1px solid #DDDDDD;
+    padding-top:3px;
+
+}
+
+.media_box:hover{
+    display:block;
+    background-color:#ddd;
 }
 
 .pin_action{
     float:right;
 
+}
+.follow_widget{
+    background-color:rgb(255,255,255);
+    width:782px;
+    height:116px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    border-style:solid;
+    border-color: rgb(204, 204, 204);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2)
+
+}
+.follow_widget img{
+    width:119px;
+    height:117px;
+    padding:0px 18px 0px 0px;
+    float:left
+}
+
+.widget_info h1{
+    font-family:Oswald;
+    font-size:22px;
+    line-height:120%;
+    color:rgb(85,85,85);
+    text-align:left;
+    text-transform:capitalize;
+    margin-top:2px;
+}
+
+.widget_info p{
+    font-family:'helvetica Neue', helvetica, Arial ;
+    font-size:15px;
+    line-height:120%;
+    color:rgb(84,84,84);
+    text-align:left;
+    margin-top:-3px;
+    marging-bottom:15px;
+    height:45px;
+}
+
+.widget_info h3{
+    font-family:'helvetica Neue', helvetica, Arial ;
+    font-size:12px;
+    line-height:120%;
+    color:rgb(84,84,84);
+    text-align:left;
+    text-transform:capitalize;
+
+}
+.widget_info span.pin_posted{
+    font-family:'helvetica Neue', helvetica, Arial ;
+    font-size:11px;
+    line-height:120%;
+    color:rgb(84,84,84);
+    text-align:left;
+    text-transform:capitalize;   
+    margin-left:15px;
+    margin-top:-5px;
+}
+
+.widget_info img{
+    width:10px;
+    height:10px;
+    padding-right:5px;
+    margin-top:2px;
+}
+.index3{
+    margin-top:135px;
 }

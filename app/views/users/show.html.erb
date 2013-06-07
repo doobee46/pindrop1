@@ -1,16 +1,26 @@
 <div class="container_16">
 	<div class="grid_16">
-		<div class="index2">
+		<div class="grid_13 suffix_2 index">
+			<div class="follow_widget">
+			 <%= image_tag @user.gravatar_url %>
 
-			<div id="pins">
+				<div class="widget_info">
+					<h1><%= @user.name %><span class="pin_posted"> <%=@user.pins.count%> Pins Posted </span></h1>
+					<p><%= @user.description %></p>
+					<%=image_tag('location.png')%> <h3><%= @user.location%></h3>
+
+				</div>
+
 				
-			  <%= render @pins %>
-			  
 			</div>
-
-			<%= will_paginate @pins %>
 		</div>
-
+		<div class="index3">
+	   		<div id="pins">
+				<%= render @pins %>
+			</div>
+			<%= will_paginate @pins %>
+		</div>	
+			
 	</div>
-
 </div>
+

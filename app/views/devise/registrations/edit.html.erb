@@ -1,13 +1,14 @@
 <div class="container_16">
   <div class="grid_16">
-    <div class="grid_4 suffix_1 alpha">
+    <div class="index">
+      <div class="grid_4 suffix_1 alpha">
 
       <div class="profile_account">
         <%=image_tag "avatar.png" %>
       </div>
 
       <div class="profile_account">
-         <h3 class="form_title"><%= @user.name %></h3>
+         <h3 class="form_title"><%= current_user.name %></h3>
          <h4 class="form_sub">Joined :<%= time_ago_in_words(current_user.created_at) +" "+ "ago" %></h4>
       </div>
       <div class="profile_account">
@@ -36,6 +37,12 @@
 
                         <%= f.label :name %>
                         <%= f.text_field :name%>
+
+                        <%= f.label :location %>
+                        <%= f.text_field :location%>
+
+                        <%= f.label :description %>
+                        <%= f.text_area :description ,:cols => 4, :rows => 4 %>
 
                         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -69,9 +76,13 @@
         <div class="form_account">
           <h3 class="form_title">My Profile Picture </h3>
           <P class="form_sub">Click below to update your picture</p>
-
+          <%= form_for(@user) do |f|%> 
+          <%= f.label :image ,"upload an image" %>
+          <%= f.file_field :image %>
+          <%end%>
         </div>
 
       </div>
   </div>
+    </div>
 </div>

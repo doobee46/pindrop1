@@ -19,8 +19,12 @@
         </div>
 
          <div class="user_info" >
-           <strong>Pinned by</strong><br/>   
-           <strong><%= pin.user.name %></strong>
+           <strong>Pinned by</strong><br/> 
+           <%if pin.user.name == nil %>
+           <strong>Default User</strong>
+           <%else%>  
+           <strong><%= link_to pin.user.name, pin.user %></strong>
+           <%end%>
          </div>
 
       </div> 
