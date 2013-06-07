@@ -11,20 +11,28 @@
       <p class="pin_title">
         <%= pin.description %> 
       </p>
-      
-      <p >
-        <strong class= "pin_sub">
-          Posted by <%=link_to pin.user.name, pin.user%>
-          <%= time_ago_in_words(pin.created_at) +" "+ "ago" %>
-        </strong>
 
-      </p>
-      <div>              
+      <div class="media_box">
+
+        <div class="top-gravatar">
+          <%= image_tag pin.user.gravatar_url, :class => "img-polaroid" %>
+        </div>
+
+         <div class="user_info" >
+           <strong>Pinned by</strong><br/>   
+           <strong><%= pin.user.name %></strong>
+         </div>
+
+      </div> 
+       
+      <div class="pin_action">    
         <%if current_user == pin.user %>
-        <%= link_to 'Edit', edit_pin_path(pin) %>
-        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Edit', edit_pin_path(pin) %> |
+          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
         <%end%>
-      </div>
+      </div> 
+           
+      
 </div>
 
 

@@ -21,7 +21,7 @@ body {
 }
 
 .index{
-    margin-top:-5px;
+    margin-top:10px;
 }
 index2{
     margin-top:25px;
@@ -557,4 +557,28 @@ color: rgb(0, 150, 187);
     line-height:120%;
     color:rgb(255,255,255);
     text-align:right;
+}
+
+.top-gravatar{
+  width:25px;
+  height:25px;
+  float:left;
+  padding-right:14px;
+ 
+}
+
+.user_info{
+  color: rgb(153,153,153); 
+  font-size:10px;
+
+}
+
+.media_box{
+    padding-bottom:7px;
+    border-bottom:1px solid #DDDDDD;
+}
+
+.pin_action{
+    float:right;
+
 }
