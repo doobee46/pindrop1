@@ -1,31 +1,51 @@
-
 <div class="container_16">
 	<div class="grid_16">
-		<div class="pin_account grid_4 ">
+		<div class="index">
+			<div class="grid_12 alpha">
+				<div class="pin_display">
+                  <div class=" back btn-red pull_left">
+                   <%= link_to image_tag('back-white.png'), pins_path %>
+                  </div>
+				</div>
+				<div class="pin_main">
 
-		<div class="well">
-			  <div class="box">
-			  	<%=image_tag @pin.image %>
-			  </div>
-			  <p class="form_sub">
-			  	<%= @pin.description %>
-			  </p>
+			  	    <%=image_tag @pin.image(:large), class: 'box2'%>
 
-			  <p class="form_sub">
-			  	<%= @pin.user.name %>
-			  </p>
-                
-              <%= rating_for @pin, "like" %>
-			
-			  <% if current_user == @pin.user %>
-			  <%= link_to 'Edit', edit_pin_path(@pin) %> |
-			  <%end%>
-	          <%= link_to 'Back', pins_path %>
+			  	    <div class="like ">
+	                    <%= rating_for @pin, "like" %>
+                    </div>
 
-	         
+				</div>
+				<div class="pin_info">
+	                  <%= image_tag @pin.user.gravatar_url, class: 'pull_left'%>
+	                  <h3 class="pin_creation"><%= @pin.user.name%> <span class="time"> . <%= time_ago_in_words(@pin.created_at)+ " ago"%>
+	                  	<%if current_user == @pin.user %>
+				        | <%= link_to 'Edit', edit_pin_path(@pin) %> 
+				        <%end%>
+				        </span></h3>                  	 
+				</div>
+				
+					<div class="comment_info">
+		                  <%= image_tag current_user.gravatar_url, class: 'pull_left'%>
+		                  <h3 class="pin_creation"><%= current_user.name%> </h3>
+						  <%= render_comments_form @pin %>
+						   
+					</div>
+					<div class="pin_info">
+						
+					</div>
+				
+			</div>
+			<div class="grid_4 omega">
+				<div class="follower">
+                  <h3>Follows</h3>
+				</div>
+
+				<div class="follower_grid">
+                  
+				</div>
+
 			</div>
 		</div>
-
 	</div>
-
 </div>

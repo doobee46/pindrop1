@@ -6,10 +6,14 @@ namespace :db do
   		name = Faker::Name.name 
   		email ="user-#{n+1}@example.com"
   		password ="password"
+      location ="new york"
+      description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. "
   		User.create!( name: name,
   			          email: email,
   			          password: password,
-  			          password_confirmation: password)
+  			          password_confirmation: password,
+                  location: location,
+                  description: description)
   	end
      
      User.all.each do |user|

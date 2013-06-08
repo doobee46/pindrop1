@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
 
+  acts_as_follower
+  acts_as_followable
+
   validates :description, :length => { :maximum => 140 }
   
   devise :database_authenticatable, :registerable,

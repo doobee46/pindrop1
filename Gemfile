@@ -22,6 +22,8 @@ gem 'public_activity'
 
 gem "acts_as_follower"
 
+gem 'opinio'
+
 
 
 group :production do
@@ -40,3 +42,5 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+
+gem "kaminari"

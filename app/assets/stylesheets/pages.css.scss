@@ -4,7 +4,7 @@
 
 body {
     min-height:100%;
-	/*background-color: rgb(231,229,230);*/
+    background-color: rgb(231,229,230);
 	padding-top:63px;
 
 }
@@ -54,12 +54,22 @@ index2{
   background-color:rgb(255,255,255)
 
 }
+.box2{
+  margin:5px;
+  padding:5px;
+  font-size:11px;
+  box-shadow: 0px 1px 2px rgba(34, 25, 25, 0.4);
+  width:357px;
+  background-color:rgb(255,255,255);
+  
+  
+}
 
 .box img{
     display:block;
     width:100%;
 }
-.box a:hover{
+.box img:hover{
   opacity: 1;
     color: #666;
 
@@ -526,7 +536,7 @@ color: rgb(0, 150, 187);
 }  
 
 .pin_sub {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Helvetica neue','helvetica',sans-serif;
     font-size: 10px;
     line-height: 120%;
     color: rgb(153,153,153);
@@ -633,11 +643,12 @@ color: rgb(0, 150, 187);
 
 .widget_info h3{
     font-family:'helvetica Neue', helvetica, Arial ;
-    font-size:12px;
+    font-size:10px;
     line-height:120%;
     color:rgb(84,84,84);
     text-align:left;
     text-transform:capitalize;
+    margin-top:15px;
 
 }
 .widget_info span.pin_posted{
@@ -653,10 +664,162 @@ color: rgb(0, 150, 187);
 
 .widget_info img{
     width:10px;
-    height:10px;
+    height:14px;
     padding-right:5px;
     margin-top:2px;
 }
 .index3{
     margin-top:95px;
 }
+
+.pin_display{
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(241, 241, 241, 0.9)) repeat scroll 0% 0% transparent;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    display: block;
+    vertical-align: middle;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+    cursor: default;
+    height: 36px;
+    padding: 5px 10px 6px;
+    top: 0px;
+    width: 680px;
+
+}
+
+.pin_main{
+    background-color:rgb(255,255,255);
+    width:700px;
+    height:100%;
+    border-color:rgb(204,204,204);
+    border-width:1px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    border-style:solid;
+    padding-top:35px;
+    padding-bottom:35px;
+    text-align:center; 
+    line-height:200px;
+    
+}
+.like{
+   margin-left:310px;
+    line-height:30px;
+}
+
+.follower{
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(241, 241, 241, 0.9)) repeat scroll 0% 0% transparent;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    display: block;
+    vertical-align: middle;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+    cursor: default;
+    height: 36px;
+    padding: 5px 10px 6px;
+    top: 0px;
+    width:216px;
+    
+}
+
+.follower_grid{
+    background-color:rgb(255,255,255);
+    width:216px;
+    height:100%;
+    border-color:rgb(204,204,204);
+    border-width:1px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    border-style:solid;
+    padding: 5px 10px 6px;
+}
+
+.pin_image a:hover{
+    cursor: -moz-zoom-in;
+    
+}
+
+.btn .pull_right a img{
+    marging-top:-5px;
+}
+.back{
+ float:right;
+} 
+
+.pin_info{
+   background-color:rgb(255,255,255);
+    width:700px;
+    height:65px;
+    border-color:rgb(204,204,204);
+    border-width:1px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    border-style:solid;
+    padding-top:10px;
+    padding-bottom:15px;     
+}
+
+.pin_info img{
+    width:53px;
+    height:53px;
+    padding:5px 10px 0px 25px;
+}
+
+.comment_info{
+   background-color:rgb(255,255,255);
+    width:700px;
+    height:100%;
+    border-color:rgb(204,204,204);
+    border-width:1px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    border-style:solid;
+    padding-top:15px;
+}
+.comment_info img{
+    width:53px;
+    height:53px;
+    padding:5px 10px 0px 25px;
+}
+
+.pin_creation{
+    margin-left: 90px;
+    font-size: 13px;
+    margin-top: -65px;
+    font-family: 'helvetica neue',helvetica,arial;
+}  
+
+span.time{
+  font-size:13px;
+  color: rgb(153, 153, 153);
+  font-weight:normal; 
+  
+}
+form#new_comment.new_comment{
+  margin: -18px 90px 20px;  
+}
+
+#new_comment h3{
+  display:none;
+}
+
+#new_comment p{
+  margin: 0px 0px 3px;  
+}
+
+textarea#comment_body.grid_10{
+    margin-:20px;
+}
+
+.btn_follows{
+   position: relative;
+    top: -45px;
+    right: 0px;
+    float: right;
+    margin-right: 30px;
+
+} 

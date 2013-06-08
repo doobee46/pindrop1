@@ -1,12 +1,20 @@
 Pindrop::Application.routes.draw do
   
 
+  opinio_model
+
   match '/rate' => 'rater#create', :as => 'rate'
 
   get "users/show"
 
   resources :activities
-  resources :pins
+  resources :pins do
+    opinio
+  end
+  
+  resources :users, :only => [:index, :show] do
+  resources :follows, :only => [:create, :destroy]
+  end
 
 
   devise_for :users

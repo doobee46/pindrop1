@@ -66,6 +66,9 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.7)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     letsrate (1.0.8)
     mail (2.5.3)
       i18n (>= 0.4.0)
@@ -74,6 +77,10 @@ GEM
     mime-types (1.22)
     multi_json (1.7.2)
     nokogiri (1.5.9-x86-mingw32)
+    opinio (0.6)
+      jquery-rails
+      kaminari
+      rails (~> 3)
     orm_adapter (0.4.0)
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
@@ -149,7 +156,9 @@ DEPENDENCIES
   devise
   faker
   jquery-rails
+  kaminari
   letsrate
+  opinio
   paperclip (~> 3.0)
   pg
   public_activity

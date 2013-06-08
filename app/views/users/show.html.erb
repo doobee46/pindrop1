@@ -8,6 +8,15 @@
 					<h1><%= @user.name %><span class="pin_posted"> <%=@user.pins.count%> Pins Posted </span></h1>
 					<p><%= @user.description %></p>
 					<%=image_tag('location.png')%> <h3><%= @user.location%></h3>
+					<%= @user.follow_count%>
+
+					<div class="btn_follows">
+						<% if user_signed_in? %>
+							<div id="follow_user">
+							<%= render :partial => "shared/follow_user", :locals => {:user => @user} %>
+							</div>
+						<% end %>
+					</div>
 
 				</div>
 				
