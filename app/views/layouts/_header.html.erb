@@ -2,7 +2,7 @@
             <header class="container_16">
                 <div class="grid_16">
                     <div class=" logo grid_2  alpha">
-                        <%= link_to (image_tag("logo.png")), root_path %>
+                        <%= link_to (image_tag("logo2.png")), root_path %>
                     
                     </div>
                     
@@ -30,7 +30,7 @@
                                 <li><%=link_to raw("<i class=\"icon-star\"></i><span class='menu-drop'>My Pins</span>"),current_user %></li>
                                 <li><%=link_to raw("<i class=\"icon-bullhorn\"></i><span class='menu-drop'>Feed</span>"),activities_path  %>
                                 </li>
-                                <li><%=link_to raw("<i class=\"icon-user\"></i><span class='menu-drop'>Profile</span>"),edit_user_registration_path %>
+                                <li><%=link_to raw("<i class=\"icon-user\"></i><span class='menu-drop'>Profile</span>"),edit_user_registration_path%>
                                 </li>
                                 <li class="divider"></li>
                                 <li><%=link_to raw("<i class=\"icon-off\"></i><span class='menu-drop'>Logout</span>"), destroy_user_session_path, method: :delete %></li>

@@ -1,6 +1,6 @@
 Pindrop::Application.routes.draw do
   
-
+  root :to => 'pins#index'
   opinio_model
 
   match '/rate' => 'rater#create', :as => 'rate'
@@ -11,22 +11,20 @@ Pindrop::Application.routes.draw do
   resources :pins do
     opinio
   end
-  
-  resources :users, :only => [:index, :show] do
-  resources :follows, :only => [:create, :destroy]
-  end
-
 
   devise_for :users
   match 'users/:id' => 'users#show', as: :user
+
+  resources :users, :only => [:index, :show] do
+  resources :follows, :only => [:create, :destroy]
+  end
 
   match 'index', :to => "pages#index", :as => :index
   match 'login', :to => "pages#login", :as => :login
   match 'about', :to => "pages#about", :as => :about
   match 'contact', :to => "pages#contact", :as => :contact
   
-
-  root :to => 'pins#index'
+  
 
   
 

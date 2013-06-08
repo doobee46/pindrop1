@@ -601,7 +601,7 @@ color: rgb(0, 150, 187);
 }
 .follow_widget{
     background-color:rgb(255,255,255);
-    width:920px;
+    width:925px;
     height:80px;
     -moz-border-radius:1px;
     -webkit-border-radius:1px;
@@ -610,19 +610,22 @@ color: rgb(0, 150, 187);
     border-color: rgb(204, 204, 204);
     border-width: 1px;
     border-style: solid;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2)
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    margin-left:5px;
+    padding: 3px 0px 3px 0px;
 
 }
-.follow_widget img{
+.follow_widget img.img-circle{
     width:80px;
     height:80px;
-    padding:0px 18px 0px 0px;
+    margin-right:18px;
+    margin-left:14px;
     float:left
 }
 
 .widget_info h1{
     font-family:'helvetica neue', helvetica , arial;
-    font-size:22px;
+    font-size:19px;
     line-height:120%;
     color:rgb(85,85,85);
     text-align:left;
@@ -643,12 +646,13 @@ color: rgb(0, 150, 187);
 
 .widget_info h3{
     font-family:'helvetica Neue', helvetica, Arial ;
-    font-size:10px;
+    font-size:12px;
     line-height:120%;
     color:rgb(84,84,84);
     text-align:left;
     text-transform:capitalize;
-    margin-top:15px;
+    margin-top: 12px;
+    font-weight: normal;
 
 }
 .widget_info span.pin_posted{
@@ -660,13 +664,14 @@ color: rgb(0, 150, 187);
     text-transform:capitalize;   
     margin-left:15px;
     margin-top:-5px;
+    font-weight:normal;
 }
 
 .widget_info img{
     width:10px;
     height:14px;
-    padding-right:5px;
-    margin-top:2px;
+    padding-right:2px;
+    margin-top:-3px;
 }
 .index3{
     margin-top:95px;
@@ -823,3 +828,8 @@ textarea#comment_body.grid_10{
     margin-right: 30px;
 
 } 
+.follow_count{
+    margin-left:400px;
+    font-size:13px;
+    font-weight:normal;
+}
