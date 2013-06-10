@@ -24,6 +24,8 @@ gem "acts_as_follower"
 
 gem 'opinio'
 
+gem 'newrelic_rpm'
+
 
 
 group :production do
