@@ -4,16 +4,16 @@ class FollowsController < ApplicationController
 		@user = User.find(params[:user_id])
 		current_user.follow(@user)
 		respond_to do |format|
-	      format.html { redirect_to @user }
-	      format.js
+		 format.js  
+      end  	
 	end
 	 
 	def destroy
 		@user = User.find(params[:user_id])
 		current_user.stop_following(@user)
 		respond_to do |format|
-	      format.html { redirect_to @user }
-	      format.js
+		 format.js   { render :nothing => true } 
+      end  	
 	end
 
 end
