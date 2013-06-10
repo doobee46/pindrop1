@@ -1,32 +1,53 @@
 <div class="container_16">
 	<div class="grid_16">
-		<div class="index">
-			<div class="follow_widget">
-			 <%= image_tag @user.gravatar_url, class: 'img-circle' %>
+			<div class=" grid_11 alpha">
+				<div class="index">
+					<div class="follow_widget">
+					 <%= image_tag @user.gravatar_url, class: 'img-circle' %>
 
-				<div class="widget_info">
-					<h1><%= @user.name %><span class="pin_posted"> <%=@user.pins.count%> Pins Posted </span></h1>
-					<p><%= @user.description %></p>
-					 <h3><%=image_tag('location.png')%> <%= @user.location%> <span class="follow_count"> follower (<%= @user.followers_count%>) |  following (<%= @user.follow_count%>) </span></h3>
-					
-
-					<div class="btn_follows">
-						<% if user_signed_in? %>
-							<div id="follow_user">
-							<%= render :partial => "shared/follow_user", :locals => {:user => @user} %>
+						<div class="widget_info">
+							<h1><%= @user.name %></h1>
+							<p><%= @user.description %></p>
+							<h3><%=image_tag('location.png')%> <%= @user.location%></h3>
+							
+							<div class="btn_follows">
+								<% if user_signed_in? %>
+									<div id="follow_user">
+									<%= render :partial => "shared/follow_user", :locals => {:user => @user} %>
+									</div>
+								<% end %>
 							</div>
-						<% end %>
-					</div>
 
+						</div>
+						
+					</div>
 				</div>
-				
 			</div>
-		</div>
-		
+
+			<div class=" grid_4 omega">
+				<div class="index">
+					<div class="right_widget">
+
+		            	<ul>
+		            		<li><span class="pin_posted"> <%=@user.pins.count%> Pins Posted </span></li>
+		            		<li>
+		            			<%= @user.followers_count%> follower
+		            		</li>
+		            		<li>
+		            			<%= @user.follow_count%> following
+		            		</li>
+		            	</ul>
+		            </div>
+	            </div>
+	        </div>
+     
+		<div class="index3">
 	   		<div id="pins">
 				<%= render @pins %>
 			</div>
-			<%= will_paginate @pins %>	
+			<%= will_paginate @pins %>
+		</div>	
+
 	</div>
 </div>
 
