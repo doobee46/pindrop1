@@ -1,0 +1,78 @@
+<%= stylesheet_link_tag "login" %>
+<div id="login_form">
+    <div class="container_12">
+        <div id="wrapper_form" class="grid_12">
+            <div id="log_form" class="grid_4 alpha">
+                <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "form-signin"}) do |f| %>
+                <fieldset>
+                    <h3 class="form_title">Log in</h3>
+                    <p class="form_sub">Please log me into my account</p>
+                    <label>Username</label>
+                    <%= f.email_field :email, :placeholder => "Email address"%> 
+                    <label>Password</label>
+                    <%= f.password_field :password, :placeholder => "Password"%> 
+                    <% if devise_mapping.rememberable? -%>
+                    <label class="checkbox">
+                        <%= f.check_box :remember_me %> Remember me
+                    </label> <br>
+                    <% end -%>
+                    <%= f.submit "log me in!", class: 'btn-red' %>
+                </fieldset>
+                <% end %>
+                <div class="retrieve">
+                    <%= link_to "Forgot Passwords?",edit_user_password_path %>
+                    <a href=""> Forgot username?</a>
+                </div>
+            </div>
+
+            <div id="new_account"class="grid_4">
+             <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "form-signin"}) do |f| %>
+             <fieldset>
+                <h3 class="form_title">New Account</h3>
+                <p class="form_sub">Please fill out the information below to setup your account</p>
+                <label>Name</label>
+                <%= f.text_field :name, :placeholder => "Full name",:required => "true" %>
+                <label>Email</label>
+                <%= f.email_field :email, :placeholder => "Email address", :required => "true" %>
+                <label>Password</label>
+                <%= f.password_field :password, :placeholder => "Password", :required => "true" %>
+                <label> Comfirm Password </label>
+                <%= f.password_field :password_confirmation, :placeholder => "Password confirmation", :required => "true" %>
+                <br>
+
+                <span class="agreed">
+                    By signing up, you agree to our <a href="">terms of use</a> and<a>privacy policy</a>
+
+                </span><br>
+                <%= f.submit "Sign me up!", class: "btn-red" %>
+            </fieldset>
+            <% end %>
+        </div>
+        <div id="social_connect" class="grid_3 omega">
+            <div class="facebook">
+                <h3 class="form_title">Log in with Facebook</h3>
+                <p class="form_sub">It's fast and easy</p>
+                <div class="facebook_btn">
+                    <a href="/auth/facebook" ><%= image_tag "/assets/facebook.png", :alt=>"facebook " %> log in with Facebook </a>
+             </div>
+             <p class="form_sub">we will never post anything without permision</p>
+
+
+         </div>
+         <div class="twitter_connect">
+            <h3 class="form_title">Log in with Twitter</h3>
+            <p class="form_sub">It's fast and easy</p>
+            <div class="twitter_btn">
+             <a href="/auth/twitter" ><%= image_tag "/assets/twitter.png", :alt=>"twitter" %> log in with Twitter </a>
+         </div>
+         <p class="form_sub">we will never post anything without permision</p>
+
+     </div>
+
+
+ </div>
+
+</div>
+
+</div>
+</div>

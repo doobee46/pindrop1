@@ -1,0 +1,197 @@
+#login_form {
+    background-color: rgb(240,240,240);
+    width: 100%;
+    height: 655px;
+    padding-top: 50px;
+}
+/*#new_account {
+    background-color: rgb(255,255,255);
+    width: 280px;
+    height: 460px;
+    padding: 20px 20px 20px 20px;
+    border-color: rgb(204,204,204);
+    border-width: 1px;
+    -moz-border-radius:7px;
+    border-radius:7px;
+    border-style: solid;
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+}*/
+#new_account {
+    background-color: rgb(255,255,255);
+    width: 280px;
+    padding: 20px 20px 20px 20px;
+    border-color: rgb(204,204,204);
+    border-width: 1px;
+    -moz-border-radius:7px;
+    border-radius:7px;
+    border-style: solid;
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+}
+
+.form_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 120%;
+    font-weight: bold;
+    color: rgb(68,68,68);
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.form_sub {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 120%;
+    color: rgb(153,153,153);
+    text-align: left;
+    margin-bottom: 10px;
+}
+/*.btn {
+    background-color: rgb(0,177,236);
+  
+    -moz-border-radius: 3px;
+   
+    -webkit-border-radius: 3px;
+  
+    border-radius: 3px;
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+}
+.btn:hover {
+    background-color: rgb(38,201,255);
+
+    -moz-border-radius: 3px;
+ 
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+}
+
+
+a.btn,input.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 120%;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-weight: normal;
+}
+/*input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    width: 239px;
+    height: 27px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    -moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.5);
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 3px;
+    font-style: italic;
+}
+label.checkbox { }
+label,
+input,
+button,
+select,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 120%;
+    color: rgb(68,68,68);
+    font-weight: bold;
+    text-transform: capitalize;
+}*/
+#social_connect {
+    background-color: transparent;
+    width: 154px;
+    height: 263px;
+    border-color: rgb(204,204,204);
+    border-width: 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border-style: solid;
+    margin-top: 45px;
+    padding: 41px 40px 45px 25px;
+    float: right;
+}
+.twitter_connect { margin-top: 40px }
+.twitter_btn {
+    background-color: rgb(29,202,255);
+    padding: 4px 12px;
+    margin-bottom: 8px;
+}
+.twitter_btn a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 120%;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.twitter_btn a img { margin-left: -5px }
+.facebook_btn {
+    background-color: rgb(59,89,152);
+    padding: 4px 12px;
+    margin-bottom: 8px;
+}
+.facebook_btn a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 120%;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.facebook_btn a img {
+    margin-left: -5px;
+    margin-right: 2px;
+}
+.agreed {
+    color: #999999;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.retrieve a {
+    color: rgb(0, 150, 187);
+    text-decoration: none;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.agreed a {
+    color: rgb(0, 150, 187);
+    text-decoration: none;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.checkbox {
+    font-size: 11px;
+    font-weight: normal;
+}
+
