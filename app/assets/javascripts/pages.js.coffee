@@ -7,4 +7,3 @@ $(document).ready ->
     duration: 6000
     fade: 750
 
-

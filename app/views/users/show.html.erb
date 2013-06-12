@@ -1,3 +1,5 @@
+<%= javascript_include_tag "ajax-submit" %>
+<div class="ajax-progress"></div>
 <div class="container_16">
 	<div class="grid_16">
 			<div class=" grid_11 alpha">
@@ -29,7 +31,7 @@
 					<div class="right_widget">
 
 		            	<ul>
-		            		<li><span class="pin_posted"> <%=@user.pins.count%> Pins Posted </span></li>
+		            		<li><span class="pin_posted"><i class="icon-picture"></i> <%=@user.pins.count%> Pins Posted </span></li>
 		            		<li>
 		            			<%= @user.followers_count%> follower
 		            		</li>

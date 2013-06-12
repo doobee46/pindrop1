@@ -852,3 +852,33 @@ textarea#comment_body.grid_10{
     font-size:13px;
     font-weight:normal;
 }
+.right_widget ul{
+    margin-top:2px;
+
+}
+.right_widget ul li {
+    padding:3px;
+    border-bottom:1px solid #e1e5e9;
+}
+.right_widget ul li:last-child{
+    border-bottom:none;
+}
+.right_widget ul li:hover{
+    display:block;
+    background-color:rgb(221,221,221);
+    cusor:pointer
+}
+
+.follower_grid ul{
+    display:inline table;
+    margin:0px;
+}
+
+.follower_grid ul li{
+    margin:0px;
+}
+
+.follower_grid ul li img{
+    width:25px;
+    height:25px;
+}
