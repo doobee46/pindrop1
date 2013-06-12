@@ -1,26 +1,3 @@
-<div id="login_form">
-
-	<div class="container_12">
-	                <div id="wrapper_form" class="grid_12">
-
-	                	<div id="log_form" class="grid_4 alpha">
-	                	    <%= render :partial => ('devise/sessions/new')%>
-	                    </div>
-
-	                	<div class="new_account grid_4">
-	                		<%= render :partial => ('devise/registrations/new')%>
-	                	</div>
-
-	                	<div id="social_connect" class="grid_3 omega">
-	                		<%= render ('pages/social')%>
 
 
-	                	</div>
-
-                 
-
-	                     
-	                </div>
-	 </div> 
-
-</div>
+<%= render :partial => "/devise/login", :locals => {:resource => resource} %>
