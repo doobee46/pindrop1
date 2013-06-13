@@ -1,29 +1,27 @@
-<div class="jumbotron">
+<div class="main_front">
   <div class="container_16">
       <div class="grid_16">
-        <div class="index2">
-              
-          <div class="grid_8 alpha">
-            <div class="right_col">
-              <h1 class="front_bigtext">Organize the thing you love </h1>
-              <h3 class="front_sub">Save, Share with friends .</h3>
-
-            </div>
+        <div class="grid_6 alpha">
+          <div class="main_col">
+            <%= image_tag "front_text.png"%>
+            <!--<h1>Organize your picture</h1>
+            <h3>save and share with the people you care</h3>-->
+            <%= link_to 'Create my free account', login_path, class: "call_to_action"%>
           </div>
-
-          <div class="grid_8 omega clearfix">
-            <div class="computer">
-              <%= image_tag "computer.png"%>
-            </div>
+        </div>
+        <div class="grid_9 omega ">
+          <div class="computer">
+            <%= image_tag "computer2.png"%>
           </div>
-
-          <div id="main_action"> 
-              <div class="grid_4 prefix_4 suffix_4">
-                <%= link_to 'Join for free', login_path, class: "btn-large-primary"%>
-              </div>  
-          </div>
-        </div>    
+        </div>
       </div>
+  </div>
+</div>
+<div class="how_it_works">
+  <div class="container_16">
+    <div class="grid_16">
+      <h1>How it work .</h1>
+    </div>
   </div>
 </div>
 

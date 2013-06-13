@@ -1,7 +1,7 @@
 <div class="box">
      <div class="pin_image">
         <%= link_to (image_tag pin.image(:medium)), pin%>
-        <span><i class="icon-eye-open"></i> <%= pin.impressionist_count %></span> 
+        <span><i class="icon-eye-open icon-border"></i> <%= pin.impressionist_count %></span> 
         <% unless pin.price == nil %>
           <div class="price">  
               <%= number_to_currency (pin.price) %> 
@@ -32,7 +32,7 @@
        
       <div class="pin_action">    
         <%if current_user == pin.user %>
-          <%= link_to image_tag("trash.png"),pin, method: :delete, data:{confirm: "Are you sure you want to delete this posts."}  %>
+          <%= link_to raw('<i class="icon-trash"></i>'),pin, method: :delete, data:{confirm: "Are you sure you want to delete this pin."}  %>
         <%end%>
       </div> 
            

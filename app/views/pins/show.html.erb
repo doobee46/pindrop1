@@ -3,8 +3,8 @@
 		<div class="index">
 			<div class="grid_12 alpha">
 				<div class="pin_display">
-                  <div class=" back btn-red pull_left">
-                   <%= link_to image_tag('back-white.png'), pins_path %>
+                  <div class=" back pull_left">
+                   <%= link_to raw(''),pins_path %>
                   </div>
 				</div>
 				<div class="pin_main">
@@ -13,10 +13,7 @@
 
 			  	    <div class="like ">
 	                    <%= rating_for @pin, "like" %>
-                    </div>
-
-                    <span class="badge badge-info"><%=@pin.impressionist_count%></span>
-                    	
+                    </div>   	
 				</div>
 				<div class="pin_info">
 	                  <%= image_tag @pin.user.gravatar_url, class: 'pull_left'%>

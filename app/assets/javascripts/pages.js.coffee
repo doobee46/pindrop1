@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
-  $(".jumbotron").backstretch ["http://img825.imageshack.us/img825/3486/churchu.jpg", "http://img812.imageshack.us/img812/5082/sunsetlr.jpg","http://img854.imageshack.us/img854/6011/girlrunning.png"],
+  $(".jumbotron").backstretch ["http://img268.imageshack.us/img268/6011/girlrunning.png", "http://img812.imageshack.us/img812/5082/sunsetlr.jpg","http://imageshack.us/a/img41/9122/churchn.jpg"],
     duration: 6000
     fade: 750
 
