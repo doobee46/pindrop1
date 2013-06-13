@@ -1,4 +1,5 @@
 class Pin < ActiveRecord::Base
+  is_impressionable 
   opinio_subjectum
   include PublicActivity::Common
 # tracked except: :update, owner: ->(controller, model) { controller && controller.current_user }

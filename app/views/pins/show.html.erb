@@ -15,6 +15,8 @@
 	                    <%= rating_for @pin, "like" %>
                     </div>
 
+                    <span class="badge badge-info"><%=@pin.impressionist_count%></span>
+                    	
 				</div>
 				<div class="pin_info">
 	                  <%= image_tag @pin.user.gravatar_url, class: 'pull_left'%>

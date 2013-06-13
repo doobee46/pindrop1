@@ -26,6 +26,7 @@ gem 'opinio'
 
 gem 'newrelic_rpm'
 
+gem 'impressionist'
 
 
 group :production do
