@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 
-gem 'jquery-rails'
+gem "jquery-rails", "2.3.0"
 
 gem 'devise'
 
@@ -38,7 +38,7 @@ gem 'less-rails-fontawesome'
 
 gem 'thin'
 
-gem 'activeadmin'
+gem "activeadmin"
 
 ruby '1.9.3'
 
