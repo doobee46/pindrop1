@@ -190,6 +190,17 @@ index2{
 	box-shadow:1px 1px 1px 0px rgba(0,0,0,0.2);
 	
 }
+.btn_wrapper{
+   position:absolute;
+   top: 20px;
+   right: 0px;
+   margin-right: 10px;
+   display :none    
+}
+
+.pin_image:hover  .btn_wrapper{
+    display:block
+}
 
 .box{
   margin:5px;
@@ -709,6 +720,7 @@ color: rgb(0, 150, 187);
     text-align:right;
 }
 
+
 .top-gravatar{
   width:25px;
   height:25px;
@@ -847,7 +859,7 @@ color: rgb(0, 150, 187);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.22);
     cursor: default;
-    height: 36px;
+    height: 20px;
     padding: 5px 10px 6px;
     top: 0px;
     width: 680px;
@@ -883,11 +895,19 @@ color: rgb(0, 150, 187);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.22);
     cursor: default;
-    height: 36px;
+    height: 20px;
     padding: 5px 10px 6px;
     top: 0px;
     width:216px;
     
+}
+.follower h3{
+    font-size:18px;
+    font-family:'helvetica', arial ,sans-serif;
+    font-weight:normal;
+    text-align:left;
+    margin-left:15px;
+    margin-bottom:5px;
 }
 
 .follower_grid{
@@ -902,7 +922,6 @@ color: rgb(0, 150, 187);
     border-style:solid;
     padding: 5px 10px 6px;
 }
-
 .pin_image a:hover{
     cursor: -moz-zoom-in;
     

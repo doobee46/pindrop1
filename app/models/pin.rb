@@ -1,4 +1,5 @@
 class Pin < ActiveRecord::Base
+  acts_as_voteable
   is_impressionable 
   opinio_subjectum
   include PublicActivity::Common
@@ -42,6 +43,7 @@ class Pin < ActiveRecord::Base
   def currency_display
    
   end 
+  
   
 
 end

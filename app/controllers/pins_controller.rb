@@ -84,4 +84,12 @@ class PinsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def vote_for_pin
+    @pin = Pin.find(params[:id])
+    current_user.vote_for(@pin)
+    respond_to do |format|
+      format.js
+    end
+  end
 end

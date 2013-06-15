@@ -15,3 +15,9 @@ jQuery ->
         $.getScript(url)
     $(window).scroll()
 
+$(document).ready ->
+  $(".box").mouseleave ->
+    $(".button_wrapper").hide()
+
+  $(".box").mouseleave ->
+    $(".button_wrapper").show()
