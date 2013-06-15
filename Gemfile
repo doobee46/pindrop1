@@ -38,6 +38,8 @@ gem 'less-rails-fontawesome'
 
 gem 'thin'
 
+gem 'activeadmin'
+
 group :production do
   gem 'pg'
 end
