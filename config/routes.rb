@@ -1,10 +1,11 @@
 Pindrop::Application.routes.draw do
+
+  root :to => 'pins#index'
   
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  root :to => 'pins#index'
   opinio_model
 
   match '/rate' => 'rater#create', :as => 'rate'
