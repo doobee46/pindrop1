@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  #after_create :send_welcome_email
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -9,7 +10,7 @@ class User < ActiveRecord::Base
   validates :description, :length => { :maximum => 140 }
   
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,  :confirmable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :acts_as_follower, :location, :description
@@ -28,6 +29,20 @@ class User < ActiveRecord::Base
 	  "http://gravatar.com/avatar/#{hash}"
 
   end
+
+  private
+
+  #def send_welcome_email
+      #UserMailer.registration_confirmation(self).deliver
+  #end
+
+
+  protected
+  def confirmation_required?
+    false
+  end
+
+
 
 
 

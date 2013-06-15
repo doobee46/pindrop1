@@ -17,7 +17,7 @@ Pindrop::Application.routes.draw do
     opinio
   end
 
-  devise_for :users
+  devise_for :users ,controllers: { registrations: "registrations" }
   match 'users/:id' => 'users#show', as: :user
 
   resources :users, :only => [:index, :show] do
