@@ -50,12 +50,14 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     commonjs (0.2.6)
+    daemons (1.1.9)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
     erubis (2.7.0)
+    eventmachine (1.0.3-x86-mingw32)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faker (1.1.2)
@@ -149,6 +151,10 @@ GEM
     statistics2 (0.54)
     therubyracer (0.11.0beta1-x86-mingw32)
       ref
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     thor (0.18.1)
     thumbs_up (0.6.4)
       activerecord
@@ -192,6 +198,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer
+  thin
   thumbs_up
   uglifier (>= 1.0.3)
   will_paginate (= 3.0.3)

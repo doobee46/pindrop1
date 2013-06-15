@@ -30,8 +30,13 @@ gem 'impressionist'
 
 gem 'thumbs_up'
 
+gem 'less'
 
+gem 'less-rails'
 
+gem 'less-rails-fontawesome'
+
+gem 'thin'
 
 group :production do
   gem 'pg'
@@ -39,15 +44,13 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'thin'
 end
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem "therubyracer", :require => 'v8'
-  gem 'less'
-  gem 'less-rails'
-  gem 'less-rails-fontawesome'
   gem 'uglifier', '>= 1.0.3'
 end
 
