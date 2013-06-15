@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.3'
 
 gem 'jquery-rails'
 
@@ -39,6 +39,8 @@ gem 'less-rails-fontawesome'
 gem 'thin'
 
 gem 'activeadmin'
+
+ruby '1.9.3'
 
 group :production do
   gem 'pg'
