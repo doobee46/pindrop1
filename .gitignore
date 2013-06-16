@@ -24,3 +24,6 @@ doc/
 
 #Ignore sampleimages
 /sampleimages
+
+# Ignore application configuration
+/config/application.yml

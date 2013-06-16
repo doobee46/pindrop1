@@ -82,6 +82,9 @@ GEM
     faker (1.1.2)
       i18n (~> 0.5)
     fastercsv (1.5.5)
+    figaro (0.6.4)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     has_scope (0.5.1)
@@ -222,6 +225,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   faker
+  figaro
   impressionist
   jquery-rails (= 2.3.0)
   kaminari
