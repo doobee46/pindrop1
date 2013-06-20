@@ -5,7 +5,7 @@ ActiveAdmin.register User do
 	  column "Date joinned",:created_at
 	  column :location 
 	  column :description
-	 default_actions
+	  default_actions
 	end  
   
 end

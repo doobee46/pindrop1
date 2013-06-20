@@ -1,5 +1,9 @@
 Pindrop::Application.routes.draw do
 
+  resources :line_items
+
+  resources :carts
+
   root :to => 'pins#index'
   
   ActiveAdmin.routes(self)
@@ -16,17 +20,20 @@ Pindrop::Application.routes.draw do
   resources :pins do
     opinio
   end
-
-  devise_for :users ,controllers: { registrations: "registrations" }
+  
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
   match 'users/:id' => 'users#show', as: :user
+  devise_for :users ,controllers: { registrations: "registrations" }
+  
 
   resources :users, :only => [:index, :show] do
   resources :follows, :only => [:create, :destroy]
   end
 
-  match 'index', :to => "pages#index", :as => :index
-  match 'login', :to => "pages#login", :as => :login
-  match 'about', :to => "pages#about", :as => :about
+  match 'index',   :to => "pages#index",   :as => :index
+  match 'login',   :to => "pages#login",   :as => :login
+  match 'about',   :to => "pages#about",   :as => :about
   match 'contact', :to => "pages#contact", :as => :contact
   
   

@@ -1,0 +1,32 @@
+<div class="container_16">
+	<div class= "grid_16">
+		<h2>Your Pinhub Cart</h2>
+
+		<ul>
+		 <%@cart.line_items.each do |item| %>
+		 <li><%=item.quantity%> &times; <%=item.pin.description%></li>
+		
+		<li>
+		  <div class="item-price">
+			<%=number_to_currency (item.total_price)%>
+		  </div>
+	    </li>
+	    <li>
+
+	    <div class="total">
+			
+		</div>
+
+	    </li>
+		
+
+		<%end%>
+		 <div class="form-actions">
+		<%= button_to "Empty cart",@cart, :method => :delete,:comfirm => 'Areyou sure?', class: 'btn btn-success'%>
+		</div>
+
+
+		</ul>
+	</div>
+</div>
+

@@ -5,10 +5,17 @@
 				<div class="pin_display">
 					<%= @pin.description %> 
                   <div class=" back pull_left">
-                  <%= ilink_to "remove","", pins_path, class: 'btn btn-danger btn-small' %>
+                  <%= ilink_to "remove","", pins_path, class: 'btn btn-small' %>
 			      </div>
 				</div>
+				
 				<div class="pin_main">
+					<div class="wrapper_btn">
+		              <button class="btn btn-small pull_left"><i class="icon-heart"></i> like</button>
+			          <% unless @pin.price == nil %>
+			              <button class="btn btn-small pull_left"><i class="icon-tags"></i> buy</button>
+			          <%end%>
+			        </div>
 
 			  	    <%=image_tag @pin.image(:large), class: 'box2'%>
 

@@ -42,7 +42,17 @@ gem "activeadmin"
 
 gem 'figaro'
 
+gem 'omniauth'
+
+gem 'omniauth-facebook'
+
+gem 'oauth2'
+
 ruby '1.9.3'
+
+
+
+
 
 group :production do
   gem 'pg'

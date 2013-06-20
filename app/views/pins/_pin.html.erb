@@ -1,7 +1,13 @@
 <div class="box">
       <div class="pin_image">
         <%= link_to (image_tag pin.image(:medium)), pin%>
-        <span><i class="icon-eye-open icon-border"></i> <%= pin.impressionist_count %></span>
+        
+        <span>
+          <% unless pin.price == nil %>
+                <!--<button class="btn btn-small pull_left"><i class="icon-tags"></i> buy</button>-->
+                <%= button_to "buy",line_items_path(:pin_id => pin), :class => 'buy btn btn-small' %>
+          <%end%>
+        </span> 
         <% unless pin.price == nil %>
           <div class="price">  
               <%= number_to_currency (pin.price) %> 
@@ -10,15 +16,13 @@
 
         <div class="btn_wrapper">
           <button class="btn btn-small pull_left"><i class="icon-heart"></i> like</button>
-          <% unless pin.price == nil %>
-              <button class="btn btn-small pull_left"><i class="icon-tags"></i> buy</button>
-          <%end%>
         </div>
 
       </div>
-       
+      
+      <span><i class="icon-eye-open icon-border"></i> <%= pin.impressionist_count %></span>
       <p class="pin_title">
-        <%= pin.description %> 
+        <%= pin.description %>
       </p>
 
       <div class="media_box">

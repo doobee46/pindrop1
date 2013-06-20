@@ -53,13 +53,13 @@
                 <h3 class="form_title">Log in with Facebook</h3>
                 <p class="form_sub">It's fast and easy</p>
                 <div class="facebook_btn">
-                    <a href="/auth/facebook" ><%= image_tag "/assets/facebook.png", :alt=>"facebook " %> log in with Facebook </a>
-             </div>
+                    <%= link_to (image_tag('/assets/facebook.png'))+"log in with Facebook", user_omniauth_authorize_path(:facebook) %>
+            </div>
              <p class="form_sub">we will never post anything without permision</p>
 
 
-         </div>
-         <div class="twitter_connect">
+        </div>
+        <div class="twitter_connect">
             <h3 class="form_title">Log in with Twitter</h3>
             <p class="form_sub">It's fast and easy</p>
             <div class="twitter_btn">
