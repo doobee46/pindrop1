@@ -1,17 +1,18 @@
 <%if user_signed_in?%>
+<%= render 'feed'%> 
 <div class="container_16">
-    <div class="grid_16">
-        <div class="index">
+  <div class="grid_16">
+    <div class="index">
+		<div id="pins">
 
-          <div id="pins">
-  			<%= render @pins %>     
-          </div>
-
+			<%= render @pins%>     
 		</div>
-	    <div>
-	    <%= will_paginate @pins %>
-	    </div>
-    <div>
+
+		<div>
+		    <%= will_paginate @pins %>
+		</div>
+	</div>
+  </div>
 </div>
  
 <%else%>

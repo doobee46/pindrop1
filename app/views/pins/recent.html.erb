@@ -1,0 +1,14 @@
+<%= render 'feed'%> 
+<div class="container_16">
+  <div class="grid_16">
+    <div class="index">
+		<div id="pins">
+		  <%= render @recent%>     
+		</div>
+
+		<div>
+		   <%= will_paginate @recent %>
+		</div>
+	</div>
+  </div>
+</div>

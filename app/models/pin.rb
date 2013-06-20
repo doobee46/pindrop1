@@ -1,6 +1,5 @@
 class Pin < ActiveRecord::Base
   attr_accessible :description, :image, :image_remote_url, :price, :private
-
   letsrate_rateable "like"
   acts_as_followable
   acts_as_voteable
@@ -19,6 +18,7 @@ class Pin < ActiveRecord::Base
 
   scope :published, where("pins.created_at IS NOT NULL ")
   scope :recent, lambda{published.where("pins.created_at > ?", 1.week.ago.to_date).limit(4)}
+  scope :buy, where("pins.price IS NOT NULL")
   
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
@@ -52,6 +52,7 @@ class Pin < ActiveRecord::Base
     end
   end
 
+ 
  
 
 end

@@ -1,0 +1,14 @@
+<%= render 'feed'%> 
+<div class="container_16">
+  <div class="grid_16">
+    <div class="index">
+		<div id="pins">
+			<%= render @buy%>     
+		</div>
+
+		<div>
+		    <%= will_paginate @buy %>
+		</div>
+	</div>
+  </div>
+</div>

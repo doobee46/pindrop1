@@ -5,7 +5,9 @@ Pindrop::Application.routes.draw do
   resources :carts
 
   root :to => 'pins#index'
-  
+  match 'buy', :to =>"pins#buy",  :as => :buy 
+  match 'recent', :to =>"pins#recent",  :as => :recent
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -25,7 +27,7 @@ Pindrop::Application.routes.draw do
   
   match 'users/:id' => 'users#show', as: :user
   devise_for :users ,controllers: { registrations: "registrations" }
-  
+
 
   resources :users, :only => [:index, :show] do
   resources :follows, :only => [:create, :destroy]

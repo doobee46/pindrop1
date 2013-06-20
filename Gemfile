@@ -46,6 +46,8 @@ gem 'omniauth-facebook'
 
 gem 'oauth2'
 
+gem 'has_scope'
+
 ruby '1.9.3'
 
 

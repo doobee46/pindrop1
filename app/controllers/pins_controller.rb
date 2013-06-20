@@ -1,11 +1,12 @@
 class PinsController < ApplicationController
   before_filter :authenticate_user!, except: [:index]
   impressionist :actions=>[:show],:unique => [:session_hash]
+
   # GET /pins
   # GET /pins.json
   def index
     @pins = Pin.order("created_at desc").page(params[:page]).per_page(10).search(params[:search])
-
+      
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @pins }
@@ -92,4 +93,20 @@ class PinsController < ApplicationController
       format.js
     end
   end
+
+  def buy
+    @buy= Pin.buy.order("created_at desc").page(params[:page]).per_page(10).search(params[:search])
+    respond_to do |format|
+      format.html # buy.html.erb
+      format.json { render json: @buy }
+      format.js
+    end
+  end
+
+  def recent
+    @recent = Pin.recent.order("created_at desc").page(params[:page]).per_page(10).search(params[:search])
+  end
+
 end
+
+
