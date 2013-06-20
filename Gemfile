@@ -36,8 +36,6 @@ gem 'less-rails'
 
 gem 'less-rails-fontawesome'
 
-gem 'thin'
-
 gem "activeadmin"
 
 gem 'figaro'
@@ -56,6 +54,8 @@ ruby '1.9.3'
 
 group :production do
   gem 'pg'
+  gem 'thin'
+
 end
 
 group :development, :test do
