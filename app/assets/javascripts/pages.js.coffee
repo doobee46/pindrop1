@@ -7,3 +7,7 @@ $(document).ready ->
     duration: 6000
     fade: 750
 
+$(document).ready ->
+  $("header").mouseenter ->
+    $(".live").slideToggle "slow"
+

@@ -105,6 +105,20 @@ class PinsController < ApplicationController
 
   def recent
     @recent = Pin.recent.order("created_at desc").page(params[:page]).per_page(10).search(params[:search])
+    respond_to do |format|
+      format.html # recent.html.erb
+      format.json { render json: @recent }
+      format.js
+    end
+  end
+
+  def popular
+    @popular = Pin.popular.order("created_at desc").page(params[:page]).per_page(10).search(params[:search])
+    respond_to do |format|
+      format.html # popular.html.erb
+      format.json { render json: @popular  }
+      format.js
+    end
   end
 
 end

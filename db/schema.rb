@@ -145,6 +145,7 @@ ActiveRecord::Schema.define(:version => 20130507141821893) do
     t.string   "image_remote_url"
     t.integer  "price"
     t.boolean  "private"
+    t.integer  "count"
   end
 
   add_index "pins", ["user_id"], :name => "index_pins_on_user_id"

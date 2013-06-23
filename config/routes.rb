@@ -7,6 +7,7 @@ Pindrop::Application.routes.draw do
   root :to => 'pins#index'
   match 'buy', :to =>"pins#buy",  :as => :buy 
   match 'recent', :to =>"pins#recent",  :as => :recent
+  match 'popular', :to =>"pins#popular",  :as => :popular
 
   ActiveAdmin.routes(self)
 
