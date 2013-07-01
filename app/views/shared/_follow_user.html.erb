@@ -2,6 +2,6 @@
 	<% if current_user.following?(user) %>
 	<%=button_to("UnFollow ", user_follow_path(user.to_param, current_user.get_follow(user).id), :method => :delete, :remote => true,:format => :js, :class => 'follow btn btn-small') %>
 	<% else %>
-	<%= button_to("Follow", user_follows_path(user.to_param), :remote => true, :format => :js, :class => 'follow btn btn-small btn-success') %>
+	<%= button_to("+1 Follow", user_follows_path(user.to_param), :remote => true, :format => :js, :class => 'follow btn btn-small btn-success') %>
 	<% end %>
 <% end %>

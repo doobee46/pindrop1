@@ -1,5 +1,5 @@
 class CartsController < InheritedResources::Base
-	include CurrentCart
+	include Current_Cart
 	before_action :set_cart, only: [:new, :create] 
 
 	def index

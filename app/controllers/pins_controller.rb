@@ -1,6 +1,5 @@
 class PinsController < ApplicationController
   before_filter :authenticate_user!, except: [:index]
-  impressionist :actions=>[:show],:unique => [:session_hash]
 
   # GET /pins
   # GET /pins.json
@@ -18,7 +17,7 @@ class PinsController < ApplicationController
   # GET /pins/1.json
   def show
     @pin = Pin.find(params[:id])
-    impressionist(@pin)
+    impressionist @pin
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @pin }

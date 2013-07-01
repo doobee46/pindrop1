@@ -8,6 +8,6 @@ $(document).ready ->
     fade: 750
 
 $(document).ready ->
-  $("header").mouseenter ->
-    $(".live").slideToggle "slow"
-
+  $("body").mouseenter ->
+    $(".live").slideDown "slow"
+  

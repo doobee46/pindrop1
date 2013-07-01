@@ -146,6 +146,7 @@ ActiveRecord::Schema.define(:version => 20130507141821893) do
     t.integer  "price"
     t.boolean  "private"
     t.integer  "count"
+    t.integer  "impressions_count"
   end
 
   add_index "pins", ["user_id"], :name => "index_pins_on_user_id"

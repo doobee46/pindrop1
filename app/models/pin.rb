@@ -3,7 +3,7 @@ class Pin < ActiveRecord::Base
   letsrate_rateable "like"
   acts_as_followable
   acts_as_voteable
-  is_impressionable :counter_cache => { :count => :count, :unique => true } 
+  is_impressionable :counter_cache => true
   opinio_subjectum
   include PublicActivity::Common
 # tracked except: :update, owner: ->(controller, model) { controller && controller.current_user }
@@ -17,9 +17,9 @@ class Pin < ActiveRecord::Base
   has_attached_file :image, styles: {medium: "320x240>", :thumb => "100x100>", :large => "357x443>"}
 
   scope :published, where("pins.created_at IS NOT NULL ")
-  scope :recent, lambda{published.where("pins.created_at > ?", 1.week.ago.to_date).limit(4)}
+  scope :recent, lambda{published.where("pins.created_at > ?", 1.week.ago.to_date)}
   scope :buy, where("pins.price IS NOT NULL")
-  scope :popular ,Pin.joins(:impressions).where("pins.count < 20")
+  scope :popular ,where("pins.impressions_count >= 5").order("created_at desc")
   
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
