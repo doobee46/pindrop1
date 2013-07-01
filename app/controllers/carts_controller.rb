@@ -1,9 +1,7 @@
 class CartsController < InheritedResources::Base
-	before_action :set_cart, only: [:new, :create] 
-
 	def index
 		@pin=Pin.all
-    end 
+  end 
 
    def show
     begin
