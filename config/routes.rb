@@ -9,6 +9,8 @@ Pindrop::Application.routes.draw do
   match 'recent', :to =>"pins#recent",  :as => :recent
   match 'popular', :to =>"pins#popular",  :as => :popular
 
+
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -20,15 +22,18 @@ Pindrop::Application.routes.draw do
   get "users/show"
 
   resources :activities
+
   resources :pins do
     opinio
   end
   
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
-  match 'users/:id' => 'users#show', as: :user
+  
   devise_for :users ,controllers: { registrations: "registrations" }
-
+  
+  devise_for :users
+  match 'users/:id', :to => 'users#show', :as => :user
 
   resources :users, :only => [:index, :show] do
   resources :follows, :only => [:create, :destroy]

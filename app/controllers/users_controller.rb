@@ -5,4 +5,5 @@ class UsersController < ApplicationController
      @pins = @user.pins.page(params[:page]).per_page(20)
    end
 
+
 end

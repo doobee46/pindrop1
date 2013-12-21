@@ -19,7 +19,7 @@ class Pin < ActiveRecord::Base
   scope :published, where("pins.created_at IS NOT NULL ")
   scope :recent, lambda{published.where("pins.created_at > ?", 1.week.ago.to_date)}
   scope :buy, where("pins.price IS NOT NULL")
-  scope :popular ,where("pins.impressions_count >= 5").order("created_at desc")
+  scope :popular ,where("pins.impressions_count >= 5").order("impressions_count desc")
   
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
